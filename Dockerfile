@@ -7,6 +7,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         libz-dev \
         libpq-dev \
+        libonig-dev \
         libjpeg-dev \
         libpng-dev \
         libssl-dev \
@@ -38,7 +39,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
-    
+
 RUN composer update && composer install 
 
 WORKDIR /home/gkk/techive/techive-to-do-list-app
