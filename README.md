@@ -21,7 +21,7 @@ The To-Do List App is a simple, user-friendly application designed to help users
 2. Branching Strategy: Each developer creates a feature branch from main.
 ## Developer Assignments and Tasks
 ### Mikeyas Aemero
-### Module: User Authentication
+### Module 1: User Authentication
 #### Task 1: Set up user authentication using Laravel Breeze.
 - Create routes for registration and login.
 - Implement registration and login views.
@@ -29,14 +29,14 @@ The To-Do List App is a simple, user-friendly application designed to help users
 - Create routes and views for password reset.
 - Ensure validation and email notifications.
 ### Amare Yohannis: 
-### Module : Task Management
+### Module 2 : Task Management
 #### Task 1: Create a Task model and migration.
 - Define the database schema for tasks (title, description, status, user_id).
 #### Task 2: Implement CRUD operations for tasks.
 - Create routes and controllers for creating, reading, updating, and deleting tasks.-
 - Develop corresponding views for task management.
 ### Besza Asrat:
-### Module : User Interface
+### Module 3 : User Interface
 #### Task 1: Set up Blade templates for the front-end.
 - Design the layout for the application.
 - Create views for displaying tasks.
@@ -44,7 +44,7 @@ The To-Do List App is a simple, user-friendly application designed to help users
 - Add options for filtering tasks by status (completed/incomplete).
 - Allow sorting tasks by creation date or due date.
 ### Etaferahu Sefineh
-### Module : API Development
+### Module 4 : API Development
 #### Task 1: Create a RESTful API for task management.
 - Define API routes for tasks (GET, POST, PUT, DELETE).
 - Implement API controllers.
