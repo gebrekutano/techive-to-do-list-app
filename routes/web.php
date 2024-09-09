@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToDoListsController;
 
@@ -18,6 +19,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+=======
 Route::group([
     'prefix' => 'to_do_lists',
 ], function () {
@@ -36,3 +50,4 @@ Route::group([
     Route::delete('/to_do_list/{toDoList}',[ToDoListsController::class, 'destroy'])
          ->name('to_do_lists.to_do_list.destroy')->where('id', '[0-9]+');
 });
+>>>>>>> 4bea2b12205abd1c30ba3314f7786a415d8267fe
