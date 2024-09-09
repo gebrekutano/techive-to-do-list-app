@@ -19,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -31,7 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-=======
 Route::group([
     'prefix' => 'to_do_lists',
 ], function () {
@@ -50,4 +48,3 @@ Route::group([
     Route::delete('/to_do_list/{toDoList}',[ToDoListsController::class, 'destroy'])
          ->name('to_do_lists.to_do_list.destroy')->where('id', '[0-9]+');
 });
->>>>>>> 4bea2b12205abd1c30ba3314f7786a415d8267fe
