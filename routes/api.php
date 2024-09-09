@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ToDoListsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/to_do_lists', [ToDoListsController::class, 'index']);
+Route::post('/to_do_lists', [ToDoListsController::class, 'store']);
+Route::get('/to_do_lists/{id}', [ToDoListsController::class, 'show']);
+Route::put('/to_do_lists/{id}', [ToDoListsController::class, 'update']);
+Route::delete('/to_do_lists/{id}', [ToDoListsController::class, 'destroy']);
